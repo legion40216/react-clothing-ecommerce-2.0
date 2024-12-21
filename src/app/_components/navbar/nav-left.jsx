@@ -8,7 +8,6 @@ export default function NavLeft() {
       <div className='hidden md:block'>
         <Brandname/>
       </div>
-        
         <NavMobile/>
     </div>
   )

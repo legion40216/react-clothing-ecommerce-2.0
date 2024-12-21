@@ -1,10 +1,11 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
-import { routes } from './navbar/navbar_P'
+
 import { usePathname } from 'next/navigation'
-import NavLinks from './navbar/nav-links'
+import NavLinks from './nav-links'
 import { Button } from '@/components/ui/button'
+import { routes } from './navbar'
 
 export default function Footer() {
     const pathName = usePathname()
@@ -16,7 +17,9 @@ export default function Footer() {
     }))
 
   return (
-<div className="grid gap-10 p-4 bg-secondary place-content-center place-items-center  md:grid-cols-[auto_1fr_auto] md:gap-4 ">
+<div className="grid gap-10 place-content-center place-items-center 
+md:grid-cols-[auto_1fr_auto] md:gap-4"
+>
     <div className='flex flex-col justify-between items-center md:items-start h-full'>
         <Link 
         href={'#'} 
@@ -71,7 +74,7 @@ export default function Footer() {
             </Button>
         </form>
 
-        <p className="primary-footer__copyright">Copyright 2020. All Right Reserved</p>
+        <p className="text-xs ">Copyright 2020. All Right Reserved</p>
     </div>           
 </div>
   )

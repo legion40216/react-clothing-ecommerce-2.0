@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
-import NavLeft from './nav-left'
-import NavMain from './nav-main'
-import NavRight from './nav-right'
-import NavLinks from './nav-links'
 import { usePathname } from 'next/navigation'
+import NavLeft from './navbar/nav-left'
+import NavMain from './navbar/nav-main'
+import NavRight from './navbar/nav-right'
+import NavLinks from './nav-links'
 
 // Export the routes constant
 export const routes = [
@@ -50,8 +50,8 @@ export default function Navbar() {
   }))
 
   return (
-    <div className='py-4 space-y-2'>
-      <div className='flex items-center justify-between'>
+    <div>
+      <div className='flex items-center justify-between container mx-auto py-2 p-4'>
         <NavLeft/>
 
         <div className='hidden md:block'>
@@ -60,12 +60,14 @@ export default function Navbar() {
         
         <NavRight/>
       </div>
-      <div className='hidden  md:flex justify-between'>
-        {updatedRoutes.map((route, index) => ( 
-          <NavLinks 
-          key={index} 
-          route={route}/>
-        ))}
+      <div className='bg-secondary'>
+        <div className='hidden md:flex justify-between container mx-auto py-2 px-4'>
+          {updatedRoutes.map((route, index) => ( 
+            <NavLinks 
+            key={index} 
+            route={route}/>
+          ))}
+        </div>
       </div>
     </div>
   )

@@ -4,11 +4,10 @@ import React from 'react'
 
 export default function Cart() {
   return (
-    <Button 
-    variant="outline" 
-    size="icon" 
-  >
-    <ShoppingBasket className='h-6 w-6' />
+  <Button 
+  variant="outline" 
+  className="aspect-square p-1">
+    <ShoppingBasket className='h-7 w-7' />
   </Button>
   )
 }

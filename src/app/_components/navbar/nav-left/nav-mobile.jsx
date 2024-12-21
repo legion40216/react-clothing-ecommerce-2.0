@@ -1,4 +1,13 @@
 import React from 'react'
+
+import { usePathname } from 'next/navigation'
+import { AlignJustify, Sun, X } from 'lucide-react'
+import Image from 'next/image'
+import { routes } from '../../navbar'
+
+import { Button } from "@/components/ui/button"
+import NavLinks from '../../nav-links'
+
 import {
   Sheet,
   SheetContent,
@@ -6,12 +15,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { Button } from "@/components/ui/button"
-import { AlignJustify, Sun, X } from 'lucide-react'
-import Image from 'next/image'
-import { routes } from '../navbar_P'
-import { usePathname } from 'next/navigation'
-import NavLinks from '../nav-links'
 
 export default function NavMobile() {
   const pathName = usePathname()
@@ -25,19 +28,17 @@ export default function NavMobile() {
   return (
       <Sheet>
         <SheetTrigger asChild>
-          <Button 
-            variant="outline" 
-            size="icon" 
-            className="relative"
-          >
-            <AlignJustify className='h-5 w-5' />
-          </Button>
+        <Button 
+        variant="outline" 
+        className="aspect-square p-1">
+          <AlignJustify className='h-6 w-6' />
+        </Button>
         </SheetTrigger>
         <SheetContent side="left" hide={true} className="p-3">
-
           <SheetTitle className="hidden">
             Menu
           </SheetTitle>
+          
           <SheetDescription className="hidden">
             Navigation for mobile screens
           </SheetDescription>

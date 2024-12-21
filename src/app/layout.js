@@ -1,5 +1,6 @@
 import Footer from "./_components/footer";
-import Navbar from "./_components/navbar/navbar_P";
+import Navbar from "./_components/navbar";
+
 import "./globals.css";
 
 export const metadata = {
@@ -10,16 +11,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
-      <body className="min-h-full font-secondary antialiased">
-        <header className="container mx-auto px-4">
+      <body className="grid grid-rows-[min-content_1fr_min-content] min-h-full 
+      font-secondary antialiased"
+      >
+        <header>
           <nav>
             <Navbar />
           </nav>
         </header>
-        <main className="container mx-auto p-4">
+        <main className="container mx-auto px-4">
           {children}
         </main>
-        <footer className="container mx-auto">
+        <footer className="container mx-auto p-4 bg-secondary ">
           <Footer />
         </footer>
       </body>
