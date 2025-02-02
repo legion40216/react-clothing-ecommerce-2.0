@@ -1,8 +1,8 @@
 import React from 'react'
-import Cart from './nav-right/cart/cart'
+import UserActions from './nav-right/user-actions'
 
 export default function NavRight() {
   return (
-    <Cart />
+    <UserActions/>
   )
 }

@@ -80,3 +80,17 @@ h1, h2, h3 {
  @apply font-primary
 }
 
+.custom-cluster-icon {
+  background: #fff;
+  border: 2px solid #666;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.mix-indicator {
+  color: #FF9800;
+  margin-left: 2px;
+}
